@@ -20,6 +20,11 @@ class thread(threading.Thread):
 			if keyboard.is_pressed('q'):
 				global timeToStop
 				timeToStop = True
+				print "Exiting..."
+				break
+		while True:
+			if keyboard.is_pressed('f'):
+				break
 
 
 
@@ -57,3 +62,4 @@ string_report = "[" + begin.strftime("%d %B %Y") + "] " + begin.strftime("%H:%M"
 pyperclip.copy(string_report)
 print string_report
 print "Report copied to your clipboard"
+print "Press f to exit"
