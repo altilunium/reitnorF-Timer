@@ -17,7 +17,7 @@ class thread(threading.Thread):
 		threading.Thread.__init__(self)
 	def run(self):
 		while True:
-			if keyboard.is_pressed('q'):
+			if keyboard.is_pressed('ctrl+space'):
 				global timeToStop
 				timeToStop = True
 				print "Exiting..."
@@ -42,7 +42,7 @@ def showCurrentDuration(start):
 	delta_fix = str(delta_hours) + " hour " + str(delta_minute) + " minute " + str(delta_second) + " second"
 	os.system('cls')
 	print "reitnorF Timer"
-	print "(Press q to stop the timer)"
+	print "(Press ctrl+space to stop the timer)"
 	print "Started: "+ start.strftime("%d %B %Y - %H:%M")
 	print delta_fix
 	time.sleep(1)
