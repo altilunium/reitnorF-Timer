@@ -3,7 +3,6 @@ import os
 import sys
 import time
 import pyperclip
-import keyboard
 import threading
 
 
@@ -16,15 +15,13 @@ class thread(threading.Thread):
 	def __init__(self):
 		threading.Thread.__init__(self)
 	def run(self):
+		global timeToStop
 		while True:
-			if keyboard.is_pressed('ctrl+space'):
-				global timeToStop
+			a = raw_input()
+			if a == "q":
 				timeToStop = True
-				print "Exiting..."
-				break
-		while True:
-			if keyboard.is_pressed('f'):
-				break
+			else:
+				print "-->" + a
 
 
 
