@@ -39,7 +39,7 @@ def showCurrentDuration(start):
 	delta_fix = str(delta_hours) + " hour " + str(delta_minute) + " minute " + str(delta_second) + " second"
 	os.system('cls')
 	print "reitnorF Timer"
-	print "((Press q and enter to stop the timer))"
+	print "(Press q and enter to stop the timer)"
 	print "Started: "+ start.strftime("%d %B %Y - %H:%M")
 	print delta_fix
 	time.sleep(1)
